@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div>Name of hero: <span id="name"></span></div>
+    <div>Height of hero: <span id="height"></span></div>
+    <div>Films: <span id="movies"></span></div>
+
+    <button id="button" >Random Star Wars Hero</button>
+
+    <script>
+
+       const nameHero=document.getElementById("name");
+       const height=document.getElementById("height");
+       const movies=document.getElementById("movies");
+       const btn=document.getElementById("button");
+
+       btn.addEventListener('click',(e)=>{
+        e.preventDefault();
+        nameHero.innerHTML="Loading....";
+            height.innerHTML="Loading....";
+            movies.innerHTML="Loading....";
+
+            const randomNumber=Math.ceil(Math.random()*83);
+            fetch(`https://swapi.dev/api/people/${randomNumber}`)
+                .then(response => response.json())
+                .then(character=>{
+                    console.log(character);
+                    nameHero.innerHTML=character["name"];
+                    height.innerHTML=character["height"];
+                    movies.innerHTML=character["films"];
+                })
+       });
+
+
+
+    </script>
+
+</body>
+</html>

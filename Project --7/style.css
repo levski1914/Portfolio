@@ -1,0 +1,13 @@
+.dropdown-toggle::after{
+    margin-left: .5em;
+    font-family: 'Font Awesome 6 Pro';
+    content: "\f078";
+    border-top: 0;
+    vertical-align: 0;
+    font-size: .9em;
+}
+
+.avatar-xs{
+    height: 1.5rem;
+    width: 1.5rem;
+}

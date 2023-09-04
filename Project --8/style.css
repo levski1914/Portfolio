@@ -1,0 +1,53 @@
+header{
+    background-color: #2B2B31;
+}
+
+.sign-in{
+    width: 96px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff5860 0%, #ff55a5 100%);
+    box-shadow: 0 0 16px 0 rgba(255,88,96,0.3);
+} 
+
+.new-items{
+    position: relative;
+    z-index: 100;
+    display: block;
+    background-color: #28282d;
+    padding: 70px 0;
+    overflow: hidden;
+}
+
+.new-items::before{
+    position: absolute; 
+    z-index: 1;
+    pointer-events: none;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url("	http://flixgo.volkovdesign.com/main/img/bg/home__bg.jpg") no-repeat center/cover;
+    opacity: .1;
+}
+
+.card{
+    margin: 0;
+}
+
+.card-body{
+    padding: 1em 0 !important;
+
+
+}
+
+.card-body h3{
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    font-size: 20px !important;
+}
